@@ -1,10 +1,11 @@
 from bs4 import BeautifulSoup, Tag, NavigableString
 from requests_html import HTMLSession
 from fake_useragent import UserAgent
+from typing import Generator
 import traceback
 import requests
 import datetime
-from time import sleep
+import time
 import sys
 
 
@@ -14,13 +15,10 @@ def get_tag_data(reddit_tag: str, session) -> Tag:
     try:
         r = session.get(
             f"https://www.reddit.com/r/{reddit_tag}/new/"
-        )  # Uncomment this line
-        print("Rendering...")  # Uncomment this line
-        r.html.render(sleep=4, scrolldown=1, wait=3, timeout=30)  # Uncomment this line
-        # with open("data.html", "r", encoding="utf-8") as f:  # Delete this line
-        # data = f.read()  # Delete this line
-        soup = BeautifulSoup(r.html.html, "lxml")  # Uncomment this line
-        # soup = BeautifulSoup(data, "lxml")  # Delete this line
+        )
+        print("Rendering...") 
+        r.html.render(sleep=2, scrolldown=1, wait=3, timeout=30) 
+        soup = BeautifulSoup(r.html.html, "lxml") 
         divs = soup.select("div > div#AppRouter-main-content")[0]
         return divs
 
@@ -30,7 +28,9 @@ def get_tag_data(reddit_tag: str, session) -> Tag:
         sys.exit()
 
 
-def _extract_link(tag: Tag):
+def _extract_link(tag: Tag) -> str:
+    """Helper Function"""
+    
     try:
         atag = tag.find("a", {"data-click-id": "body"})
         if atag is not None:
@@ -43,6 +43,8 @@ def _extract_link(tag: Tag):
 
 
 def _handle_time(time_msg: str) -> str:
+    """Helper Function"""
+    
     time_list = time_msg.split()
     time_sec = time_list[0]
     if time_list[1] == "hour":
@@ -55,6 +57,8 @@ def _handle_time(time_msg: str) -> str:
 
 
 def find_posts_links(Bs4Tag: Tag) -> Tag:
+    """Finds all the 'Posts' Links on the page and returns then as list"""
+    
     post_links = []
     if Bs4Tag is not None:
         divs = Bs4Tag.find_all("div", {"data-testid": "post-container"})
@@ -64,17 +68,21 @@ def find_posts_links(Bs4Tag: Tag) -> Tag:
                 link = _extract_link(div)
                 if link is not None:
                     post_links.append(link)
-
+    print(f'{len(post_links)} Links found!')
     return post_links
 
 
-def get_posts_data(post_links, session, ua):
-    for link in post_links:
+def get_posts_data(post_links: list, session: HTMLSession, ua: UserAgent) -> Generator:
+    """Returns a generator for the Posts data when iterated on each link"""
+
+    for link in post_links[:10]:
         try:
             headers = {"user-agent": f"{ua.random}"}
             r = session.get(
-                f"{link}", headers=headers, sleep=1, scrolldown=1, wait=3, timeout=30
+                f"{link}",
+                headers=headers,
             )
+            r.html.render(sleep=1, scrolldown=1, wait=3, timeout=30)
             post_data = {}
             soup = BeautifulSoup(r.html.html, "lxml")
             content = soup.find("div", {"data-test-id": "post-content"})
@@ -106,13 +114,18 @@ def get_posts_data(post_links, session, ua):
             post_data["posted_at"] = time_str
             post_data["title"] = title_str
             post_data["description"] = description
-
+            print(f'Post Author: {user_str}')
             yield post_data
 
         except requests.RequestException:
+            print('Got RequestException!')
             traceback.print_exc()
 
         except requests.TooManyRedirects:
             print("To many request!")
-            sleep(5)
+            time.sleep(5)
+            pass
+        
+        except IndexError:
+            print("Value Not Found!")
             pass
