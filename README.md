@@ -9,9 +9,7 @@ Python Reddit scraper is built on pure web-scraping(no API used), the code works
 
 ## Output
 Most Recent 10 posts.
-
-All JSON files are stored in >/data
-
+All JSON files are stored in /data.
 if data is not present: its the value will be null. 
 
 ## JSON fields
