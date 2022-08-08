@@ -12,19 +12,21 @@ try:
     )
 except ModuleNotFoundError as e:
     print(e)
-    print('Please download the required modules from requirements.txt')
+    print("Please download the required modules from requirements.txt")
     sys.exit()
-    
-UA = UserAgent()
-SESSION = HTMLSession()
+
 
 @click.command()
-@click.option('--tag', prompt='Please enter a valid sub-reddit tag name!', help='Enter sub-reddit tag name!')
+@click.option(
+    "--tag",
+    prompt="Please enter a valid sub-reddit tag name!",
+    help="Enter sub-reddit tag name!",
+)
 def main(tag):
     """Store last 10 posts for the tags subreddit"""
-    click.echo('starting the script!')
-    global UA 
-    global SESSION
+    click.echo("starting the script!")
+    UA = UserAgent()
+    SESSION = HTMLSession()
     try:
         divs = get_tag_data(tag, SESSION)
         links = find_posts_links(divs)
@@ -33,14 +35,12 @@ def main(tag):
         for post in posts:
             data.append(post)
 
-        with open(f"{tag_name}.json", "w", encoding="utf-8") as file_name:
-            json.dumps(data, file_name)  
-            
+        with open(f"{tag}.json", "w", encoding="utf-8") as file_name:
+            json.dump(data, file_name)
+
     except KeyboardInterrupt:
-        print('Exiting!')
+        print("Exiting!")
         sys.exit()
-
-
 
 
 if __name__ == "__main__":

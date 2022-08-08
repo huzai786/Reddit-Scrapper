@@ -8,6 +8,7 @@ import requests
 import datetime
 import time
 import sys
+import re
 
 
 def get_tag_data(reddit_tag: str, session) -> Tag:
@@ -67,35 +68,59 @@ def find_posts_links(Bs4Tag: Tag) -> Tag:
     return post_links
 
 
-def _data_handle(values_tags: Type[Tuple[Any, ...]]) -> dict:
-    post_data = {}
-    description = ""
-    if desc != []:
-        for d in desc:
-            description += d.get_text()
-            description += "\n"
-    if time is not None:
-        time_str = _handle_time(time.get_text())
-    if user is not None:
-        user_str = user.get_text()
-    if title is not None:
-        title_str = title.get_text()
-    if description == "":
-        description = "description not found"
+def _data_handle(content: Tag) -> dict:
+    """Handle data returned from the bs4 data extraction methods"""
 
-    post_data["author"] = user_str
-    post_data["posted_at"] = time_str
-    post_data["title"] = title_str
-    post_data["description"] = description
-    print(f"Post Author: {user_str}")
-    pass
+    post_data = {}
+    try:
+        ###  Finding data
+        author = content.select_one('div > a[data-testid="post_author_link"]')
+        posted_on = content.find(
+            "span",
+            {"data-click-id": "timestamp", "data-testid": "post_timestamp"},
+        )
+        title = content.select_one('div[data-adclicklocation="title"] > div > div > h1')
+        desc = content.select('div[data-click-id="text"] > div')[0]
+
+        ###  Data Filtering
+        posted_on_str = (
+            _handle_time(posted_on.get_text()) if posted_on else "Data not found"
+        )
+        author_str = author.get_text() if author else "Data not found"
+        title_str = title.get_text() if title else "Data not found"
+        desc_data_list = desc.find_all("p")
+        description = "description not found"
+        if desc_data_list:
+            description = ""
+            for d in desc_data_list:
+                data = re.sub(r"\s+", " ", d.get_text())
+                description += data
+                description += "\n"
+
+        ### Adding to dictionary
+        post_data["author"] = author_str
+        post_data["posted_at"] = posted_on_str
+        post_data["title"] = title_str
+        post_data["description"] = description
+        print(f"Post Author: {author_str}")
+
+        return post_data
+
+    except IndexError as e:
+        print("Data not found!")
+        print(e)
 
 
 def get_posts_data(
-    post_links: list, session: HTMLSession, ua: UserAgent) -> Type[Generator]:
+    post_links: list, session: HTMLSession, ua: UserAgent
+) -> Type[Generator]:
     """Returns a generator for the Posts data when iterated on each link"""
 
-    for link in post_links[:10]:
+    postDataObjects = namedtuple(
+        "post_data_object", ["author", "posted_on", "title", "description"]
+    )
+
+    for link in post_links[:5]:
         try:
             headers = {"user-agent": f"{ua.random}"}
             r = session.get(
@@ -105,25 +130,8 @@ def get_posts_data(
             r.html.render(sleep=1, scrolldown=1, wait=3, timeout=30)
             soup = BeautifulSoup(r.html.html, "lxml")
             content = soup.find("div", {"data-test-id": "post-content"})
-            posted_on = content.find(
-                "span",
-                {"data-click-id": "timestamp", "data-testid": "post_timestamp"},
-            )
-            author = content.select_one('div > a[data-testid="post_author_link"]')
-            title = content.select_one(
-                'div[data-adclicklocation="title"] > div > div > h1'
-            )
-            desc = content.select('div[data-click-id="text"] > div')[0]
-            desc = desc.find_all("p")
-            postDataObjects = namedtuple('post_data_object', ['author', 'posted_on', 'title', 'description'])
-            post_data_variables = postDataObjects(author=author, posted_on=posted_on, title=title, description=desc)
-            post_data_dict = _data_handle(post_data_variables)
-
+            post_data_dict = _data_handle(content)
             yield post_data_dict
-
-        except IndexError:
-            print("Value Not Found!")
-            return {}
 
         except requests.TooManyRedirects:
             print("To many request!")
