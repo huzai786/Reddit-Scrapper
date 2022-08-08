@@ -35,6 +35,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+```
 $ py main.py --help
 Usage: main.py [OPTIONS]
 
@@ -43,7 +44,7 @@ Usage: main.py [OPTIONS]
 Options:
   --tag TEXT  Enter sub-reddit tag name!
   --help      Show this message and exit
-  
+  ```
 To run:
 ```
 python main.py [Tag name]
