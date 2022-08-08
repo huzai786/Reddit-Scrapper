@@ -123,7 +123,7 @@ def get_posts_data(
                 f"{link}",
                 headers=headers,
             )
-            r.html.render(sleep=1, scrolldown=1, wait=3, timeout=30)
+            r.html.render(sleep=3, scrolldown=2, wait=3, timeout=30)
             soup = BeautifulSoup(r.html.html, "lxml")
             content = soup.find("div", {"data-test-id": "post-content"})
             post_data_dict = _data_handle(content)

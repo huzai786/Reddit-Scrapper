@@ -1,32 +1,72 @@
 [
     {
-        "author": "u/Candyslug",
-        "posted_at": "22:25:08 08:25",
-        "title": "Very useful worm art generator",
-        "description": "Made 4 fun & to try out bootstrap\nGithub deployment:\nhttps://candyslug.github.io/worm-generator/src/index.html\n\nSC:\n"
+        "author": "u/eemas91",
+        "posted_at": "22:34:09 12:34",
+        "title": "Is there a tool for visualizing connections between the frontend and backend of applications?",
+        "description": "I'm new to webdev and am trying to see if there is a tool that exists which would help visualize the connections between an apps front end and back end.\nFor example, showing the React components, the various fetch requests made within those components, and middleware functions those requests invoke.\nAlso looking to see if something like this exists for Svelte.\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjhx47/is_there_a_tool_for_visualizing_connections/"
     },
     {
-        "author": "u/lotsofhugszerofucks",
-        "posted_at": "22:20:08 08:20",
-        "title": "192k people who downloaded next-redux-wrapper last week. Why do you need it ? What's some real use cases ?",
-        "description": "I honestyl don't get what that package solves. Okay, I get that it provides a way to initialize client side state from the server side functions (getStaticProps, getServerSideProps), but why would we need that ? I can't find any real use cases for that.\n"
+        "author": "u/MrKeplick",
+        "posted_at": "22:10:09 12:10",
+        "title": "heroku ignores frontend files after deploying",
+        "description": "I deployed my app to heroku and the app works but only the backend . I did a simple res.send('app is running') and I got the response back on the heroku app so I know the backend works, but it seems like heroku just ignores all of the client(frontend)files and just deployed the backend files, what could be the issue? I'm attaching a picture of the folder structure (the frontend is written with react)\nhttps://i.stack.imgur.com/2qp5g.png\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjhaxh/heroku_ignores_frontend_files_after_deploying/"
     },
     {
-        "author": "u/i_am_at_work123",
-        "posted_at": "22:18:08 08:18",
-        "title": "How to target input elements when only form id is unique?",
-        "description": "I have the following form (using Forminator plugin) and I want to style it.\nThe problem is, that I have another forminator form on the same site which I styled already.\nI want to style the above form differently, but the element names (for buttons and inputs) are not unique.\nIs there any way to select specific elements using CSS but in a unique way, so the styles are only applied to this specific form? How would I select email/submit button/etc on this form in a unique way?\nI tried the following (but I'm missing something):\nAnd other combinations.\n"
+        "author": "u/gauravlogical",
+        "posted_at": "22:41:08 11:41",
+        "title": "VsCode Theme - Vasuki Dark Theme",
+        "description": "description not found",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjgfzv/vscode_theme_vasuki_dark_theme/"
     },
     {
-        "author": "u/Mr-Invincible3",
-        "posted_at": "22:00:08 08:00",
-        "title": "is this suppose to happen?",
-        "description": "So i created a postgres image via a docker and the database as well but everytime i run my program it says password authentication failed for user postgres . I double checked and realised i haven't installed pgadmin. So the error will go away after installing pgadmin right?\n"
+        "author": "u/mdlphx92",
+        "posted_at": "22:42:08 11:42",
+        "title": "Chrome Dev Tools hide siblings and parent\u2019s siblings",
+        "description": "Hi there, is there any way to accomplish something like this easily in Chrome?\nI\u2019m automating something for my company which requires scraping the page with webdriver. Unfortunately, this webpage was designed 15 years ago using a god awful 20+ varying level nested assortment of tables tr, td, hidden elements, blank html table td\u2019s, and unclassed no id elements, all of which have massive lists of obsolete attributes and the like. There are probably around 100 different datapoints that I need to retrieve, and it\u2019s almost impossible to actually follow the tree without getting lost.\nI can whip up something to strip all attributes and keep the values, making it easier to understand all the nesting, but surely there\u2019s a tool or option out there to just make it easier on the eyes for a very intense html page?\nEdit: In case it wasn\u2019t clear, I\u2019m just trying to make it easier to get my locators right. Not exaggerating when I say a locator might need to be some xpath the likes of \u201c//tr[17]/td[23]/label[3]/a[2]\u201d. Yes it\u2019s structured like that, I could never tell you why.\nThanks in advance!\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjg5mv/chrome_dev_tools_hide_siblings_and_parents/"
     },
     {
-        "author": "u/N5332",
-        "posted_at": "22:42:08 07:42",
-        "title": "Why You Need to Use Typescript for All Your Web Projects - Unless you're learning web dev, I think that most of the projects benefits being written in TypeScript",
-        "description": "description not found"
+        "author": "u/younggod",
+        "posted_at": "22:42:08 11:42",
+        "title": "How are marketplace cross-listing platforms like vendoo.co and listperfectly.com able to to post listings on sites that don\u2019t have APIs?",
+        "description": "For example Vendoo is able to post simultaneously on clothes reselling marketplaces like postmark, depop, grailed, and kidizen yet these companies don\u2019t have any APIs from what I could gather researching. I\u2019m confused as to how they make that work.\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjg30j/how_are_marketplace_crosslisting_platforms_like/"
+    },
+    {
+        "author": "u/Old-Mastodon8639",
+        "posted_at": "22:42:08 11:42",
+        "title": "what makes you choose express.js over asp.net core?",
+        "description": "most express.js developers seems to be using express.js because they have already learned javascript, but outside of that what can make you choose express.js over asp.net core?\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjfh4d/what_makes_you_choose_expressjs_over_aspnet_core/"
+    },
+    {
+        "author": "u/Sephys00",
+        "posted_at": "22:43:08 11:43",
+        "title": "Any suggestions on best technology/stack for a cms website? (alternative to wordpress)",
+        "description": "So...I think the title sums it up pretty well. I was a web dev 3 yeras ago and worked mostly with php (wordpress, laravel, symfony...) but I don't know what's the tendency nowadays.\nI want to build a cms website, the frontend could be totally made from scratch so I don't really want to fight with templates like in wp, easily maintanable through time so it has to be very stable and have a great support community so I don't have to beg for help any time I have a problem. It will host a great amount of media, videos and pictures of great quality.\nIs there a stack you can recommend me using or which is the most popular in these days among devs? No problem on technologies, it will be a personal project so I can learn about technologies I'm not used to.\n\nEDIT: I don't need it to be php, it was only the technology I used 3-4 years ago...But I can work with node/angular/any-js. c# or python...I want the most used/most reliable nowadays.\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjffa8/any_suggestions_on_best_technologystack_for_a_cms/"
+    },
+    {
+        "author": "u/SubzeroCola",
+        "posted_at": "22:43:08 11:43",
+        "title": "How Do You Enable Zoom Functionality Locally On An Iframe Without Zooming In On The Entire Page?",
+        "description": "I've added an iframe to my website. The iframe actually links to a page that is already on another part of my website. It's not linking to an external site or anything.\nThe iframe is a fixed size. I want to enable a zoom functionality on it. So that when the user's mouse is within the borders of the iframe, they can use the mousewheel to zoom in and move around within that iframe.....but I want that zoom-in to happen only within that iframe. I thought this feature would be automatic but it turns out not.\nWhen you zoom in, it instead just zooms in on the entire page.\nIs there a way to fix this that doesn't involve JQuery? Just using vanilla Javascript?\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjf87f/how_do_you_enable_zoom_functionality_locally_on/"
+    },
+    {
+        "author": "u/justbane",
+        "posted_at": "22:43:09 12:43",
+        "title": "Anyone here work in MarTech industry?",
+        "description": "Long time webdev here. I have an opportunity with a Mar-tech company as an architect and I\u2019m just wondering are there devs here that have transitioned into Mar-tech? What are some thoughts and considerations you would pass on to a web developer going into a mar-tech role?\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjf02p/anyone_here_work_in_martech_industry/"
+    },
+    {
+        "author": "u/qwertyjuju",
+        "posted_at": "22:43:09 12:43",
+        "title": "general question on webframeworks",
+        "description": "Hello, I'm a beginner in webdev. I've seen that there are a lot of webframeworks. I'm currently using symfony but I've seen that a lot of frameworks work in the same way: each time a request is done from a client, a lot of objects are created to manage the request and to send a response to the client, which means that when there are no clients doing requests, nothing happens server side. My question is as follow: how you do a dynamic webserver (I mean by dynamic, that things can happen even when there are no client requests, like for example changing values in database,...)?? Sorry for my bad English, I tried to describe my question the best I could.\n",
+        "post_link": "https://www.reddit.com/r/webdev/comments/wjepoq/general_question_on_webframeworks/"
     }
 ]
