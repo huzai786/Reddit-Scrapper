@@ -1,8 +1,8 @@
 # Reddit-Posts-Scraper
----
+
 Python Reddit scraper is built on pure web-scraping(no API used), the code works on any valid sub-reddit tag name.
 
-
+---
 ---
 ## Format
 Json
