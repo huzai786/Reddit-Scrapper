@@ -1,18 +1,24 @@
 # Reddit-Posts-Scraper
----
+
 Python Reddit scraper is built on pure web-scraping(no API used), the code works on any valid sub-reddit tag name.
 
-
 ---
+
 ## Format
-Json
+* Json
 
 ## Output
 Most Recent 10 posts.
-All JSON files are stored in /data
+All JSON files are stored in /data.
+if data is not present: its the value will be null. 
 
 ## JSON fields
-if data is not present: its the value will be null. 
+* Author
+* Posted on
+* Title
+* Description
+* Post link
+
 
 ## Set Up
 1. In the Reddit-Scraper root directory, clone the project using 
