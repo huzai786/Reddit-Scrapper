@@ -47,5 +47,5 @@ Options:
   ```
 To run:
 ```
-python main.py [Tag name]
+python main.py --tag [Tag name]
 ```
