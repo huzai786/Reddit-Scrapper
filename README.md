@@ -5,7 +5,7 @@ Python Reddit scraper is built on pure web-scraping(no API used), the code works
 ---
 
 ## Format
-Json
+* Json
 
 ## Output
 Most Recent 10 posts.
