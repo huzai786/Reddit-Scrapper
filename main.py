@@ -35,7 +35,7 @@ def main(tag):
         for post in posts:
             data.append(post)
 
-        with open(f"{tag}.json", "w", encoding="utf-8") as file_name:
+        with open(f"data/{tag}.json", "w", encoding="utf-8") as file_name:
             json.dump(data, file_name)
 
     except KeyboardInterrupt:

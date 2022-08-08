@@ -64,7 +64,6 @@ def find_posts_links(Bs4Tag: Tag) -> Tag:
                 link = _extract_link(div)
                 if link != "":
                     post_links.append(link)
-    print(f"{len(post_links)} Links found!")
     return post_links
 
 
@@ -79,16 +78,16 @@ def _data_handle(content: Tag) -> dict:
             "span",
             {"data-click-id": "timestamp", "data-testid": "post_timestamp"},
         )
-        title = content.select_one('div[data-adclicklocation="title"] > div > div > h1')
-        desc = content.select('div[data-click-id="text"] > div')[0]
+        title = content.find('div', {'data-adclicklocation':'title'}).find('h1')
+        desc = content.select_one('div[data-click-id="text"] > div')
 
         ###  Data Filtering
         posted_on_str = (
-            _handle_time(posted_on.get_text()) if posted_on else "Data not found"
+            _handle_time(posted_on.get_text()) if posted_on else None
         )
-        author_str = author.get_text() if author else "Data not found"
-        title_str = title.get_text() if title else "Data not found"
-        desc_data_list = desc.find_all("p")
+        author_str = author.get_text() if author else None
+        title_str = title.get_text() if title else None
+        desc_data_list = desc.find_all("p") if desc else None
         description = "description not found"
         if desc_data_list:
             description = ""
@@ -116,11 +115,8 @@ def get_posts_data(
 ) -> Type[Generator]:
     """Returns a generator for the Posts data when iterated on each link"""
 
-    postDataObjects = namedtuple(
-        "post_data_object", ["author", "posted_on", "title", "description"]
-    )
-
-    for link in post_links[:5]:
+    print('Getting data for recent 10 posts!')
+    for link in post_links[:10]:
         try:
             headers = {"user-agent": f"{ua.random}"}
             r = session.get(
@@ -131,6 +127,7 @@ def get_posts_data(
             soup = BeautifulSoup(r.html.html, "lxml")
             content = soup.find("div", {"data-test-id": "post-content"})
             post_data_dict = _data_handle(content)
+            post_data_dict['post_link'] = link
             yield post_data_dict
 
         except requests.TooManyRedirects:

@@ -1,27 +1,32 @@
 [
     {
+        "author": "u/ploomber-io",
+        "posted_at": "22:16:08 08:16",
+        "title": "debuglater: Serialize Python traceback for later debugging",
+        "description": "Hi r/Python!\nWe just released debuglater, an open-source library that serializes a Python traceback object for later debugging.\ndebuglater demo\nCountless times, we've scheduled overnight jobs to find out the following day that they failed. While logs are helpful, they are often insufficient for debugging. debuglater allows you to store the traceback object so you can start a debugging session at any moment.\nWe built this to support our open-source framework for data scientists, who often execute long-running code in remote environments. However, we realized this could be useful for the Python community, so we created a separate package. This project is a fork of Eli Finer's pydump, so kudos to him for laying the foundations! We made a few improvements like compatibility with recent Python versions and integration with IPython/Jupyter.\nThe implementation is quite interesting. You can see it here. The serialization step has two parts: it takes the traceback object and wraps it into a new object so it can be serialized; secondly, it stores the source code so you can debug even if you don't have access to the source code!\nPlease take it for a spin and let us know your feedback. Feel free to open an issue on GitHub!\n"
+    },
+    {
+        "author": "u/anuctal",
+        "posted_at": "22:11:08 08:11",
+        "title": "Python Poetry vs Pipenv - side by side comparison",
+        "description": "Hi all,\nI made a 1 minute length video - side by side comparison of Poetry and Pipenv.\nVideo:https://youtu.be/aZTmnCkCa3M\nI hope you will like it!Thanks for watching!\n"
+    },
+    {
+        "author": "u/foosion",
+        "posted_at": "22:53:08 07:53",
+        "title": "Python 3.11.0rc1 is out",
+        "description": "Python 3.11.0rc1 is out. It's in final form other than clear bug fixes, if any. Beta 5 seemed good enough for me.\nIt's faster than 3.10 and has some nice new features. https://docs.python.org/3.11/whatsnew/3.11.html\nhttps://www.python.org/downloads/release/python-3110rc1/\n"
+    },
+    {
         "author": "u/BOHICA_Headquarters",
-        "posted_at": "22:43:08 06:43",
+        "posted_at": "22:20:08 07:20",
         "title": "Gathering News Headlines?",
         "description": "Good morning, everyone.\nI have arrived at this subreddit after five (5) months of looking through a growing list of websites for news related to my job/sector, and desperate for a solution that does not require so much of my time/attention. Currently the task takes about three (3) hours every morning, and has therefore produced this habit of coming in earlier (6AM vs. 9AM) so it does not get in the way of my main duties. It involves me looking through each website/resource/e-mail and typing in the headlines of interest of an Excel sheet.\nI want a solution that would gather this information automatically in some kind of PDF or spreadsheet that lists the date of publication, the article title, and the hyperlink to access it. If my five minutes of Googling was fruitful, I think I am looking for a \"web scraper?\" It seems that Excel itself, Python, or Microsoft Power Automated could be one of the technologies I could explore to accomplishing this, but before diving in I wanted to get insights from the more knowledgeable.\n\nAre any or none of the three options listed above un/able to achieve the solution?\nIs there an alternative method/technology that I should be considering?\nAny particular features I should consider aside from the above objective?\nWill any solution require future upkeep and maintenance since websites are always being updated and changing their structure?\nDo I/you need any additional information to decide which option is best?\nI should mention that not having a concrete answer is welcomed. (A sounding board to help establish the parameters myself is just as useful).\nFYI: No technical background experience, but willing to invest the time into learning code if required.\nIf I'm successful, the three hours I will be saving every morning would drastically change my output, priorities, and focus. Any head-start or guidance would be appreciated!\n"
     },
     {
         "author": "u/trollimitzu_",
-        "posted_at": "22:40:08 06:40",
+        "posted_at": "22:20:08 07:20",
         "title": "Boss wants me to make a student management system",
         "description": "I work abroad as a teacher and have been working on learning Python for about 3-4 months. Me and my boss are fairly close so he asks me if I can make something like a student management system that will allow teachers to put in grades, assignments and comments about students behavior. From what I gathered it will need the following\nLogin Portal for parents\nLogin portal for teachers\nBe able to add classes and students\nBe able to input grades for classes and store them\nExport the stored grades as a PDF\nadd comments on the student that can be exported as a PDF (preferably same as above)\nGive some basic stats on the students attendance and grades\nI said I would think about it since it seems well out of my depth. I am just about learning about OOP right now and from what I understand the things I will need to do require somewhat of an intermediate level of knowledge.\nI was thinking about using Python and Flask since those are what I am familiar with.\nAm I way out of my depth? This could be super cool on my CV, and a great opportunity to build something but I don't want to agree to something that is not in the realm of reality. Would these things be that difficult to implement?\n\n(We are currently using Google classroom so at the minimum this needs to replicate that applications basic functionality, and trust me it is basic)\n"
-    },
-    {
-        "author": "u/AmicusRecruitment",
-        "posted_at": "22:38:08 06:38",
-        "title": "Python Live: Kubeflow Update and Demonstration",
-        "description": "Kubeflow requires an advanced team with vision and perseverance, and so does solving the world\u2019s hardest problems.\nThis Kubeflow update will cover:\nWhat is Kubeflow and why market leaders use Kubeflow\nUser feedback from Kubeflow User Survey\nAn update on Kubeflow 1.6\nKubeflow use case demo - Build a pipeline from a jupyter notebook\nHow to get involved with Kubeflow.\nWith over 7,000 slack members, Kubeflow is the open source machine learning platform that delivers Kubernetes native operations. Kubeflow integrates software components for model development, training, visualization and tuning, along with pipeline deployments, and model serving. It supports popular frameworks i.e. tensorflow, keras, pytorch, xgboost, mxnet, scikit learn and provides kubernetes operating efficiencies.\nIn this workshop, Josh Bottum will review why market leaders are using Kubeflow and important feedback received in the Kubeflow User Survey. He will also review the Kubeflow release process and the benefits coming in Kubeflow 1.6. Demo gods willing, Josh will also provide a quick demo of how to build a Kubeflow pipeline from a Jupyter notebook. He will finish with information on how to get involved in the Kubeflow Community.\nJosh Bottum has volunteered as a Kubeflow Community Product Manager since 2019. Over the last 12 releases, Josh has helped the Kubeflow project by running community meetings, triaging GitHub issues, answering slack questions, recruiting code contributors, running user surveys, developing release roadmaps and presentations, writing blog posts, and providing Kubeflow demonstrations.\nPlease don't be put off by having to register, this is a free live coding walk-through with a Q&A with Josh :) If you'd like to see a different topic showcased in the future please let us know! https://www.eventbrite.co.uk/e/python-live-kubeflow-update-and-demonstration-tickets-395193653857\n"
-    },
-    null,
-    {
-        "author": "u/Responsible-Air-5081",
-        "posted_at": "22:10:08 06:10",
-        "title": "My first internship project",
-        "description": "For more than 3 months I have been looking for an opportunity to prove myself somewhere, I had the opportunity to get a job through an internship in one company.\nStack - Python/FastAPI/Redis/Docker/Locust/Alchemy/Alembic/Pytest - Thinking about deploy on Azure/AWS\nI will be glad if you point out any shortcomings or express your opinion\n\nleirons/edvantis_petStore (github.com)\n"
     }
 ]

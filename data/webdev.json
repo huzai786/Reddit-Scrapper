@@ -1,0 +1,32 @@
+[
+    {
+        "author": "u/Candyslug",
+        "posted_at": "22:25:08 08:25",
+        "title": "Very useful worm art generator",
+        "description": "Made 4 fun & to try out bootstrap\nGithub deployment:\nhttps://candyslug.github.io/worm-generator/src/index.html\n\nSC:\n"
+    },
+    {
+        "author": "u/lotsofhugszerofucks",
+        "posted_at": "22:20:08 08:20",
+        "title": "192k people who downloaded next-redux-wrapper last week. Why do you need it ? What's some real use cases ?",
+        "description": "I honestyl don't get what that package solves. Okay, I get that it provides a way to initialize client side state from the server side functions (getStaticProps, getServerSideProps), but why would we need that ? I can't find any real use cases for that.\n"
+    },
+    {
+        "author": "u/i_am_at_work123",
+        "posted_at": "22:18:08 08:18",
+        "title": "How to target input elements when only form id is unique?",
+        "description": "I have the following form (using Forminator plugin) and I want to style it.\nThe problem is, that I have another forminator form on the same site which I styled already.\nI want to style the above form differently, but the element names (for buttons and inputs) are not unique.\nIs there any way to select specific elements using CSS but in a unique way, so the styles are only applied to this specific form? How would I select email/submit button/etc on this form in a unique way?\nI tried the following (but I'm missing something):\nAnd other combinations.\n"
+    },
+    {
+        "author": "u/Mr-Invincible3",
+        "posted_at": "22:00:08 08:00",
+        "title": "is this suppose to happen?",
+        "description": "So i created a postgres image via a docker and the database as well but everytime i run my program it says password authentication failed for user postgres . I double checked and realised i haven't installed pgadmin. So the error will go away after installing pgadmin right?\n"
+    },
+    {
+        "author": "u/N5332",
+        "posted_at": "22:42:08 07:42",
+        "title": "Why You Need to Use Typescript for All Your Web Projects - Unless you're learning web dev, I think that most of the projects benefits being written in TypeScript",
+        "description": "description not found"
+    }
+]
