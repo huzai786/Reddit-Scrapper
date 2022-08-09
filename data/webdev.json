@@ -1,72 +1,156 @@
 [
     {
-        "author": "u/eemas91",
-        "posted_at": "22:34:09 12:34",
-        "title": "Is there a tool for visualizing connections between the frontend and backend of applications?",
-        "description": "I'm new to webdev and am trying to see if there is a tool that exists which would help visualize the connections between an apps front end and back end.\nFor example, showing the React components, the various fetch requests made within those components, and middleware functions those requests invoke.\nAlso looking to see if something like this exists for Svelte.\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjhx47/is_there_a_tool_for_visualizing_connections/"
+        "author": "Fabaceous_",
+        "author_link": "https://www.reddit.com/user/Fabaceous_/",
+        "posted_at": "10, August, 2022 12:AM",
+        "raw_time": 1660071600,
+        "title": "Should I improve my JS?",
+        "description": "I started with classic asp and later web forms. Currently I use asp core MVC and after completing some projects I feel the code I write is decent. Obviously I still need to write some JS to make some magic happen on the front end side. I have the feeling my way of writing JS code is not up to date. I use jQuery (with doc ready hook) and define some functions for basic structuring. In some cases I use the onclick attribute of HTML elements to call my JS functions or just put a short jQuery call in it. I use a minifier but of course this doesn't affect my inline script tags. Is this ok or should I improve my JS? If yes, are there any tutorials focusing on writing modern JS code? Any help/opinion much appreciated!\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkbvd9/should_i_improve_my_js/"
     },
     {
-        "author": "u/MrKeplick",
-        "posted_at": "22:10:09 12:10",
-        "title": "heroku ignores frontend files after deploying",
-        "description": "I deployed my app to heroku and the app works but only the backend . I did a simple res.send('app is running') and I got the response back on the heroku app so I know the backend works, but it seems like heroku just ignores all of the client(frontend)files and just deployed the backend files, what could be the issue? I'm attaching a picture of the folder structure (the frontend is written with react)\nhttps://i.stack.imgur.com/2qp5g.png\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjhaxh/heroku_ignores_frontend_files_after_deploying/"
+        "author": "eff-snarf",
+        "author_link": "https://www.reddit.com/user/eff-snarf/",
+        "posted_at": "10, August, 2022 12:AM",
+        "raw_time": 1660071600,
+        "title": "Vue IDE",
+        "description": "I'm working on a Vue IDE:\nhttps://meow.energy/\nWhat do you think?\n",
+        "links": {
+            "embedded_link": [
+                "https://meow.energy/"
+            ],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkbsfl/vue_ide/"
     },
     {
-        "author": "u/gauravlogical",
-        "posted_at": "22:41:08 11:41",
-        "title": "VsCode Theme - Vasuki Dark Theme",
-        "description": "description not found",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjgfzv/vscode_theme_vasuki_dark_theme/"
+        "author": "brendanprobst",
+        "author_link": "https://www.reddit.com/user/brendanprobst/",
+        "posted_at": "10, August, 2022 12:AM",
+        "raw_time": 1660071600,
+        "title": "Dedicated \"Back Button\" required for a web app?",
+        "description": "Hi, I'm making a web app. Is it recommended to include a dedicated back button or can I expect people to just use the browser back button?\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkbnld/dedicated_back_button_required_for_a_web_app/"
     },
     {
-        "author": "u/mdlphx92",
-        "posted_at": "22:42:08 11:42",
-        "title": "Chrome Dev Tools hide siblings and parent\u2019s siblings",
-        "description": "Hi there, is there any way to accomplish something like this easily in Chrome?\nI\u2019m automating something for my company which requires scraping the page with webdriver. Unfortunately, this webpage was designed 15 years ago using a god awful 20+ varying level nested assortment of tables tr, td, hidden elements, blank html table td\u2019s, and unclassed no id elements, all of which have massive lists of obsolete attributes and the like. There are probably around 100 different datapoints that I need to retrieve, and it\u2019s almost impossible to actually follow the tree without getting lost.\nI can whip up something to strip all attributes and keep the values, making it easier to understand all the nesting, but surely there\u2019s a tool or option out there to just make it easier on the eyes for a very intense html page?\nEdit: In case it wasn\u2019t clear, I\u2019m just trying to make it easier to get my locators right. Not exaggerating when I say a locator might need to be some xpath the likes of \u201c//tr[17]/td[23]/label[3]/a[2]\u201d. Yes it\u2019s structured like that, I could never tell you why.\nThanks in advance!\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjg5mv/chrome_dev_tools_hide_siblings_and_parents/"
+        "author": "corz1445",
+        "author_link": "https://www.reddit.com/user/corz1445/",
+        "posted_at": "10, August, 2022 12:AM",
+        "raw_time": 1660071600,
+        "title": "Teacher with little Web Dev Experience...teaching Web Dev in to High Schoolers",
+        "description": "Hello All!\nI am a Science teacher who has been turned into a Web Development teacher this year for grade 10s in Canada. I was wondering if anyone on here might give me some guidance and advice on teaching it. What areas do you feel would be good for a student just starting out in the world of Web Development.\nAlso, what are the skills are fundamental for the teacher (me) to have at the start of the year?\nAny and all information is greatly appreciated!\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkbnj6/teacher_with_little_web_dev_experienceteaching/"
     },
     {
-        "author": "u/younggod",
-        "posted_at": "22:42:08 11:42",
-        "title": "How are marketplace cross-listing platforms like vendoo.co and listperfectly.com able to to post listings on sites that don\u2019t have APIs?",
-        "description": "For example Vendoo is able to post simultaneously on clothes reselling marketplaces like postmark, depop, grailed, and kidizen yet these companies don\u2019t have any APIs from what I could gather researching. I\u2019m confused as to how they make that work.\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjg30j/how_are_marketplace_crosslisting_platforms_like/"
+        "author": "billy4479",
+        "author_link": "https://www.reddit.com/user/billy4479/",
+        "posted_at": "10, August, 2022 12:AM",
+        "raw_time": 1660071600,
+        "title": "How would I hash passwords on the client side with JS",
+        "description": "I'm developing a webapp that makes use of end-to-end encryption where the client never sends to the server any password. The idea is that the user shouldn't need to trust the server to use my app since all the cryptography and hashing happens on the client.\nMy the idea was to derive a \"master-key\" from the user's password and use it to encrypt any further communication with the server. While the Web Crypto API does a good job at encryption and basic hashing it lacks some form of key derivation algorithm.\nIdeally I'd like to use something like of argon2 to derive my key because that's the de facto best algorithm for the purpose. There are a few WASM ports of it but they don't seem maintained and they don't play nice with the bundler I'm using.\nI was wondering if there's any better approach to my problem and/or better libraries to use\n",
+        "links": {
+            "embedded_link": [
+                "https://github.com/antelle/argon2-browser",
+                "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto"
+            ],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkbmm5/how_would_i_hash_passwords_on_the_client_side/"
     },
     {
-        "author": "u/Old-Mastodon8639",
-        "posted_at": "22:42:08 11:42",
-        "title": "what makes you choose express.js over asp.net core?",
-        "description": "most express.js developers seems to be using express.js because they have already learned javascript, but outside of that what can make you choose express.js over asp.net core?\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjfh4d/what_makes_you_choose_expressjs_over_aspnet_core/"
+        "author": "DanCruzNyc",
+        "author_link": "https://www.reddit.com/user/DanCruzNyc/",
+        "posted_at": "09, August, 2022 11:PM",
+        "raw_time": 1660068000,
+        "title": "AlgoExpert.io commercial on YouTube",
+        "description": "Girl with boobs out: \u201cSo you wanna be a front end engineer at Goo Goo?\u201d\nI hate this commercial am I the only one?\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkbj5q/algoexpertio_commercial_on_youtube/"
     },
     {
-        "author": "u/Sephys00",
-        "posted_at": "22:43:08 11:43",
-        "title": "Any suggestions on best technology/stack for a cms website? (alternative to wordpress)",
-        "description": "So...I think the title sums it up pretty well. I was a web dev 3 yeras ago and worked mostly with php (wordpress, laravel, symfony...) but I don't know what's the tendency nowadays.\nI want to build a cms website, the frontend could be totally made from scratch so I don't really want to fight with templates like in wp, easily maintanable through time so it has to be very stable and have a great support community so I don't have to beg for help any time I have a problem. It will host a great amount of media, videos and pictures of great quality.\nIs there a stack you can recommend me using or which is the most popular in these days among devs? No problem on technologies, it will be a personal project so I can learn about technologies I'm not used to.\n\nEDIT: I don't need it to be php, it was only the technology I used 3-4 years ago...But I can work with node/angular/any-js. c# or python...I want the most used/most reliable nowadays.\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjffa8/any_suggestions_on_best_technologystack_for_a_cms/"
+        "author": "voltomper",
+        "author_link": "https://www.reddit.com/user/voltomper/",
+        "posted_at": "09, August, 2022 11:PM",
+        "raw_time": 1660068000,
+        "title": "Frontend Roadmap for developers",
+        "description": "With what framework should I begin, what do you guys think? Would you recommend React to a beginner coder that's just starting his journey? Or would you recommend angular or vue?\nReading this blogpost it made me believe React is also ok for beginners, what do you think?\nhttps://medium.com/@pitis.radu/frontend-roadmap-in-2022-e3913070225c\n",
+        "links": {
+            "embedded_link": [
+                "https://medium.com/@pitis.radu/frontend-roadmap-in-2022-e3913070225c"
+            ],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkb6q6/frontend_roadmap_for_developers/"
     },
     {
-        "author": "u/SubzeroCola",
-        "posted_at": "22:43:08 11:43",
-        "title": "How Do You Enable Zoom Functionality Locally On An Iframe Without Zooming In On The Entire Page?",
-        "description": "I've added an iframe to my website. The iframe actually links to a page that is already on another part of my website. It's not linking to an external site or anything.\nThe iframe is a fixed size. I want to enable a zoom functionality on it. So that when the user's mouse is within the borders of the iframe, they can use the mousewheel to zoom in and move around within that iframe.....but I want that zoom-in to happen only within that iframe. I thought this feature would be automatic but it turns out not.\nWhen you zoom in, it instead just zooms in on the entire page.\nIs there a way to fix this that doesn't involve JQuery? Just using vanilla Javascript?\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjf87f/how_do_you_enable_zoom_functionality_locally_on/"
+        "author": "shgysk8zer0",
+        "author_link": "https://www.reddit.com/user/shgysk8zer0/",
+        "posted_at": "09, August, 2022 11:PM",
+        "raw_time": 1660068000,
+        "title": "JS proposal for new Set methods",
+        "description": "Just wanted to draw some attention to this proposal.\nI think it adds useful and important methods to an underappreciated class in JS; a class that is well-suited to handling fairly common tasks. Set is currently little more than a fancy kind of array where all members/items are unique (in the sense). These new methods would make Set more powerful by adding many of the methods found in set theory. Really, without these methods, Sets just aren't sets... Like how numbers aren't really numbers unless you can at least perform basic arithmetic on them. Plus, these methods really simplify a whole lot of common tasks.\nfind all the elements that two lists have in common... set.intersection()\njoin two lists without duplicates... set.union()\nfind the elements in one list that aren't in this other list... set.difference()\nfind the elements in one list or the other, but not both... set.symmetricDifference()\nis every element in one list also contained in another list... set.isSubsestOf() or set.isSupersetOf()\ndo two lists share no elements in common... set.isDisjointFrom()\nThe proposal seems to have been last discussed over 3.5 years ago, and just want to get it rolling again. So lI'm posting this in an effort to draw attention to the proposal.\n",
+        "links": {
+            "embedded_link": [
+                "https://github.com/tc39/proposal-set-methods"
+            ],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkas45/js_proposal_for_new_set_methods/"
     },
     {
-        "author": "u/justbane",
-        "posted_at": "22:43:09 12:43",
-        "title": "Anyone here work in MarTech industry?",
-        "description": "Long time webdev here. I have an opportunity with a Mar-tech company as an architect and I\u2019m just wondering are there devs here that have transitioned into Mar-tech? What are some thoughts and considerations you would pass on to a web developer going into a mar-tech role?\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjf02p/anyone_here_work_in_martech_industry/"
+        "author": "Adventurous-Leg-9493",
+        "author_link": "https://www.reddit.com/user/Adventurous-Leg-9493/",
+        "posted_at": "09, August, 2022 11:PM",
+        "raw_time": 1660068000,
+        "title": "Should I get an AWS certification?",
+        "description": "I\u2019ve been searching for front end jobs to no avail \ud83d\ude29. I feel so dejected. I\u2019m not even able to land an unpaid internship to get that experience. I dabble with front end technologies like html, css, JavaScript, reactjs, those are the main ones. I don\u2019t know what to do. Someone suggested I look into AWS certification. Should I take that path? I desperately need some advice please and thank you \ud83d\ude4f\ud83c\udffc\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkaryo/should_i_get_an_aws_certification/"
     },
     {
-        "author": "u/qwertyjuju",
-        "posted_at": "22:43:09 12:43",
-        "title": "general question on webframeworks",
-        "description": "Hello, I'm a beginner in webdev. I've seen that there are a lot of webframeworks. I'm currently using symfony but I've seen that a lot of frameworks work in the same way: each time a request is done from a client, a lot of objects are created to manage the request and to send a response to the client, which means that when there are no clients doing requests, nothing happens server side. My question is as follow: how you do a dynamic webserver (I mean by dynamic, that things can happen even when there are no client requests, like for example changing values in database,...)?? Sorry for my bad English, I tried to describe my question the best I could.\n",
-        "post_link": "https://www.reddit.com/r/webdev/comments/wjepoq/general_question_on_webframeworks/"
+        "author": "kirkbross",
+        "author_link": "https://www.reddit.com/user/kirkbross/",
+        "posted_at": "09, August, 2022 11:PM",
+        "raw_time": 1660068000,
+        "title": "CSS grid - 1 x 4up responsive layout with inline images?",
+        "description": "How would I create this layout so the 10px gutters/gaps remain and the image aspect ratios remain at all screen sizes?\nThere are exactly five images that are each 678 x 399 and every grid-column/row approach I've tried ends up jacking the layout when I shrink my browser. I'm using an nth-child to target the grid-items.\nUsing this HTML:\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": [
+                "https://preview.redd.it/rszbo4bibqg91.jpg?width=923&format=pjpg&auto=webp&s=88f497cd2e2c58a9389fd39e83e3dd979e15f755"
+            ]
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkalcq/css_grid_1_x_4up_responsive_layout_with_inline/"
+    },
+    {
+        "author": "CharlesCSchnieder",
+        "author_link": "https://www.reddit.com/user/CharlesCSchnieder/",
+        "posted_at": "09, August, 2022 11:PM",
+        "raw_time": 1660068000,
+        "title": "Having trouble with Nextjs and express app authentication",
+        "description": "So I'm trying to make my first full stack web app and am having trouble wrapping my head around authentication.\nI am using mongodb, express, and Nextjs. Could someone walk me through the thought process of authentication for my client side and backend? Are JWT the best tool for this? I would need to protect api routes as well as client side routes\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/webdev/comments/wkakaw/having_trouble_with_nextjs_and_express_app/"
     }
 ]

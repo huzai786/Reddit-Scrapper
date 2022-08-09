@@ -1,6 +1,6 @@
 import sys
 import json
-
+from pprint import pformat
 try:
     import click
     from requests_html import HTMLSession
@@ -19,22 +19,25 @@ except ModuleNotFoundError as e:
 @click.command()
 @click.option(
     "--tag",
-    prompt="Please enter a valid sub-reddit tag name!",
-    help="Enter sub-reddit tag name!",
+    prompt="Please enter a valid sub-reddit tag name.",
+    help="Valid sub-reddit tag name. for example [python, webdev, announcements, funny]"
 )
-def main(tag):
-    """Store last 10 posts for the tags subreddit"""
-    click.echo("starting the script!")
+@click.option(
+    '--tp', prompt='Enter total number of posts to scrape from 10 to 20',
+    default=10,
+    show_default=True,
+    help='Total number of posts to scrape, 10-20.'
+)
+def main(tag, tp):
+    """Scrape last 10-20 posts for the given subreddit"""
+    click.echo("starting the script! (control+c to exit)")
     UA = UserAgent()
     SESSION = HTMLSession()
     try:
         divs = get_tag_data(tag, SESSION)
         links = find_posts_links(divs)
-        posts = get_posts_data(links, SESSION, UA)
-        data = []
-        for post in posts:
-            data.append(post)
-
+        posts = get_posts_data(links, SESSION, UA, tp)
+        data = list(posts)
         with open(f"data/{tag}.json", "w", encoding="utf-8") as file_name:
             json.dump(data, file_name)
 
