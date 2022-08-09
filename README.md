@@ -8,16 +8,20 @@ Python Reddit scraper is built on pure web-scraping(no API used), the code works
 * Json
 
 ## Output
-Most Recent 10 posts.
+Most Recent 10 to 20 posts depending on user input.
 All JSON files are stored in /data.
 if data is not present: its the value will be null. 
 
 ## JSON fields
 * Author
+* Author link
+* raw timestamp
 * Posted on
 * Title
 * Description
 * Post link
+  * embedded links
+  * external links
 
 
 ## Set Up
@@ -45,13 +49,15 @@ pip install -r requirements.txt
 $ py main.py --help
 Usage: main.py [OPTIONS]
 
-  Store last 10 posts for the tags subreddit
+  Scrape last 10-20 posts for the given subreddit
 
 Options:
-  --tag TEXT  Enter sub-reddit tag name!
-  --help      Show this message and exit
+  --tag TEXT    Valid sub-reddit tag name. for example [python, webdev,
+                announcements, funny]
+  --tp INTEGER  Total number of posts to scrape, 10-20.  [default: 10] 
+  --help        Show this message and exit.
   ```
 To run:
 ```
-python main.py --tag [Tag name]
+python main.py --tag [Tag name] --tp [Total Posts]
 ```
