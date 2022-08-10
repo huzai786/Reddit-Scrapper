@@ -1,1 +1,159 @@
-"[{'author': 'waukalak',\n  'author_link': 'https://www.reddit.com/user/waukalak/',\n  'description': \"Hi folks! I'd like to share my new library with you. This is \"\n                 'a custom exception page for Starlette and FastAPI.\\n'\n                 'It is very simple to use and very informational. Hope you '\n                 'like it!\\n'\n                 'Docs and examples: '\n                 'https://github.com/alex-oleshkevich/starception\\n'\n                 '\\n',\n  'links': {'embedded_link': ['https://github.com/alex-oleshkevich/starception'],\n            'external_links': ['https://preview.redd.it/as4phjj2jqg91.png?width=1372&format=png&auto=webp&s=c840ec5cc526a8444954038c6b8a38d285131970']},\n  'post_link': 'https://www.reddit.com/r/Python/comments/wkbl21/starception_beautiful_exception_page_for/',\n  'posted_at': '10, August, 2022 12:AM',\n  'raw_time': 1660071600,\n  'title': 'Starception - beautiful exception page for Starlette and FastAPI '\n           'inspired by Phoenix Framework'}]"
+[
+    {
+        "author": "stetio",
+        "author_link": "https://www.reddit.com/user/stetio/",
+        "posted_at": "10, August, 2022 02:PM",
+        "raw_time": 1660122000,
+        "title": "Flask/Quart/Werkzeug users have you seen a performance improvement?",
+        "description": "Flask/Quart/Werkzeug users, have you seen performance improvements or changes when upgrading to Werkzeug 2.2? If so could you share your findings?\nWerkzeug 2.2 includes a new router implementation. I'd like to know what affect it has had on production apps.\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wktfaf/flaskquartwerkzeug_users_have_you_seen_a/"
+    },
+    {
+        "author": "lifetotry",
+        "author_link": "https://www.reddit.com/user/lifetotry/",
+        "posted_at": "10, August, 2022 02:PM",
+        "raw_time": 1660122000,
+        "title": "Python Crash Course, 2nd Edition",
+        "description": "Python Crash Course is the world\u2019s best-selling guide to the Python programming language. This fast-paced, thorough introduction to programming with Python will have you writing programs, solving problems, and making things that work in no time.\nhttps://www.ebook4y.com/product-page/python-crash-course-2nd-edition\n",
+        "links": {
+            "embedded_link": [
+                "https://www.ebook4y.com/product-page/python-crash-course-2nd-edition"
+            ],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkrqm4/python_crash_course_2nd_edition/"
+    },
+    {
+        "author": "pmz",
+        "author_link": "https://www.reddit.com/user/pmz/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "Uncommon Uses of Python in Commonly Used Libraries",
+        "description": "description not found",
+        "links": {
+            "embedded_link": [],
+            "external_links": [
+                "https://eugeneyan.com/writing/uncommon-python/"
+            ]
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkqmwd/uncommon_uses_of_python_in_commonly_used_libraries/"
+    },
+    {
+        "author": "CrafterTwoYT",
+        "author_link": "https://www.reddit.com/user/CrafterTwoYT/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "Making an easy Snake Game using Python and Pygame!",
+        "description": "SO, I decided to make a snake game in which you control a snake and try to get it as long as possible by eating a lot of apples. Now although my game is quite simple, it's pretty entertaining and as well as this, its easy to use. (Arrow Keys For CONTROL)\n\nHere are the scripts. Also, please ensure that you have downloaded PYGAME using the pip install pygame command in the command prompt. Tutorial on how to do that: https://www.youtube.com/watch?v=EKjALzLLgVs (SHOUTOUT TO PROGRAMMINGKNOWLEDE2)\n\nHere are the scripts:\nimport pygame\nimport time\nimport random\npygame.init()\nwhite = (255, 255, 255)\nyellow = (255, 255, 102)\nblack = (0, 0, 0)\nred = (213, 50, 80)\ngreen = (0, 255, 0)\nblue = (50, 153, 213)\ndis_width = 600\ndis_height = 400\ndis = pygame.display.set_mode((dis_width, dis_height))\npygame.display.set_caption('Snake Game by CrafterTwoYT')\nclock = pygame.time.Clock()\nsnake_block = 10\nsnake_speed = 15\nfont_style = pygame.font.SysFont(\"bahnschrift\", 25)\nscore_font = pygame.font.SysFont(\"comicsansms\", 35)\ndef Your_score(score):\nvalue = score_font.render(\"Your Score: \" + str(score), True, yellow)\ndis.blit(value, [0, 0])\ndef our_snake(snake_block, snake_list):\nfor x in snake_list:\npygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])\ndef message(msg, color):\nmesg = font_style.render(msg, True, color)\ndis.blit(mesg, [dis_width / 6, dis_height / 3])\ndef gameLoop():\ngame_over = False\ngame_close = False\nx1 = dis_width / 2\ny1 = dis_height / 2\nx1_change = 0\ny1_change = 0\nsnake_List = []\nLength_of_snake = 1\nfoodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0\nfoody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0\nwhile not game_over:\nwhile game_close == True:\ndis.fill(blue)\nmessage(\"You Lost! Press C-Play Again or Q-Quit\", red)\nYour_score(Length_of_snake - 1)\npygame.display.update()\nfor event in pygame.event.get():\nif event.type == pygame.KEYDOWN:\nif event.key == pygame.K_q:\ngame_over = True\ngame_close = False\nif event.key == pygame.K_c:\ngameLoop()\nfor event in pygame.event.get():\nif event.type == pygame.QUIT:\ngame_over = True\nif event.type == pygame.KEYDOWN:\nif event.key == pygame.K_LEFT:\nx1_change = -snake_block\ny1_change = 0\nelif event.key == pygame.K_RIGHT:\nx1_change = snake_block\ny1_change = 0\nelif event.key == pygame.K_UP:\ny1_change = -snake_block\nx1_change = 0\nelif event.key == pygame.K_DOWN:\ny1_change = snake_block\nx1_change = 0\nif x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:\ngame_close = True\nx1 += x1_change\ny1 += y1_change\ndis.fill(blue)\npygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])\nsnake_Head = []\nsnake_Head.append(x1)\nsnake_Head.append(y1)\nsnake_List.append(snake_Head)\nif len(snake_List) > Length_of_snake:\ndel snake_List[0]\nfor x in snake_List[:-1]:\nif x == snake_Head:\ngame_close = True\nour_snake(snake_block, snake_List)\nYour_score(Length_of_snake - 1)\npygame.display.update()\nif x1 == foodx and y1 == foody:\nfoodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0\nfoody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0\nLength_of_snake += 1\nclock.tick(snake_speed)\npygame.quit()\nquit()\ngameLoop()\n\nSo, hope you enjoy and PEACE OUTTTT!\n",
+        "links": {
+            "embedded_link": [
+                "https://www.youtube.com/watch?v=EKjALzLLgVs"
+            ],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkqmqy/making_an_easy_snake_game_using_python_and_pygame/"
+    },
+    {
+        "author": "CrafterTwoYT",
+        "author_link": "https://www.reddit.com/user/CrafterTwoYT/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "I made a number guessing game, using python!",
+        "description": "So, I made a number guessing game where all you have to do is insert a number and the computer will select a random number. Then it will give you clues if you get it wrong and soon enough you can guess the number.\n\nHere is the script:\nimport randomtop_of_range = input(\"Type a number: \")if top_of_range.isdigit():top_of_range = int(top_of_range)if top_of_range <= 0:print('Please type a number larger than 0 next time.')quit()else:print('Please type a number next time.')quit()random_number = random.randint(0, top_of_range)guesses = 0while True:guesses += 1user_guess = input(\"Make a guess: \")if user_guess.isdigit():user_guess = int(user_guess)else:print('Please type a number next time.')continueif user_guess == random_number:print(\"You got it!\")breakelif user_guess > random_number:print(\"You were above the number!\")else:print(\"You were below the number!\")print(\"You got it in\", guesses, \"guesses\")\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkprjd/i_made_a_number_guessing_game_using_python/"
+    },
+    {
+        "author": "mrsplash2000",
+        "author_link": "https://www.reddit.com/user/mrsplash2000/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "I found a way to organize my code when working with the pygame module",
+        "description": "Hello everyone. Good day/night to you all.\nI've been reading a book called \"Invent Your Own Computer Games With Python\" written by \"Al Sweigart\". The last chapters in this book give an introduction explanation to the pygame module which I find it pretty good for a beginner like myself (Although let me open a parenthesis here, I have read another book called \"Python Crash Course\" written by \"Eric Matthes\" so I have a pretty basic knowledge of python in general). The problem I found when working with pygame, is that sometimes it just gets very confusing and also the code starts to become very messy, especially if your project start to become larger. So, I decided to organize my code and make things more accessible so that I know where to look for certain things in case I run into errors or if I decide to change something specific. I also find it very important to write the code in an object oriented (OOP) manner because objects are very easier to work with. The last chapter of this book deals with a game called \"dodger\" which enemies from top of the screen start to fall down the screen and you have to avoid them and not hit them. The original code in the book is available in the book's resource material and you can find it very easily online (https://inventwithpython.com/invent4thed/) (the file dodger.py). So here's my version of the code. I don't think it's something special. I just used excessive amounts of comments. so let me know if it's messy or it belongs to the pits of hades :))))\nI think later steps in improving this code revolves around modularizing the code, meaning that it's best to store the classes in separate python files and then importing them in the main file and using them. Because I think storing everything in one file makes it confusing to understand the code later. For the sake of showcase here, I used a single file.\n",
+        "links": {
+            "embedded_link": [
+                "https://inventwithpython.com/invent4thed/"
+            ],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkmk5m/i_found_a_way_to_organize_my_code_when_working/"
+    },
+    {
+        "author": "Successful-Aide3077",
+        "author_link": "https://www.reddit.com/user/Successful-Aide3077/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "Memory Size of Python Data Structures",
+        "description": "description not found",
+        "links": {
+            "embedded_link": [],
+            "external_links": [
+                "https://youtube.com/shorts/DWHWPKwaXFg?feature=share"
+            ]
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkm14h/memory_size_of_python_data_structures/"
+    },
+    {
+        "author": "20Finger_Square",
+        "author_link": "https://www.reddit.com/user/20Finger_Square/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "What Do You Think Is The Most Useful Tool Or Package For General Programing",
+        "description": "description not found",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkkxib/what_do_you_think_is_the_most_useful_tool_or/"
+    },
+    {
+        "author": "3Dphotogrammetry",
+        "author_link": "https://www.reddit.com/user/3Dphotogrammetry/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "Can you create a database for your website using Python? If so, where do you store this file? How do you access it?",
+        "description": "description not found",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkksti/can_you_create_a_database_for_your_website_using/"
+    },
+    {
+        "author": "SkepticSepticYT",
+        "author_link": "https://www.reddit.com/user/SkepticSepticYT/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "Made a python script to automatically install all my steam games :)",
+        "description": "Hey all, so I had to reset my windows installation for like the 5th time in the past 6 months, so naturally I got fed up with reinstalling every single game manually. Soooo I spent like 6 hours working on a python script to do it for me!\nThe script is open source and I tried to add as many comments as possible in the code to change it up to better suit your needs if need be, so have fun learning from it or changing it :)\nHere's the script through google drive: https://drive.google.com/file/d/1DMT15cUpKYiuFXTSX11SaaquImXYnG1h/view?usp=sharing\nHere's the script through github: https://github.com/SkepticSeptic/Steamautoinstaller\nAnd heres a tutorial I made on it: https://youtu.be/gvNXnEhqf8U\nBTW: Unless you seriously know what you're doing, I HIGHLY recommend watching the tutorial\nCheers :)\n(Disclaimer: this is my first time using python to do anything more complicated than \"hello world\", so theres definitely gonna be questionable things in the code lol)\n",
+        "links": {
+            "embedded_link": [
+                "https://drive.google.com/file/d/1DMT15cUpKYiuFXTSX11SaaquImXYnG1h/view?usp=sharing",
+                "https://youtu.be/gvNXnEhqf8U",
+                "https://github.com/SkepticSeptic/Steamautoinstaller"
+            ],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkjy3i/made_a_python_script_to_automatically_install_all/"
+    },
+    {
+        "author": "GerritTheBerrit",
+        "author_link": "https://www.reddit.com/user/GerritTheBerrit/",
+        "posted_at": "10, August, 2022 03:PM",
+        "raw_time": 1660125600,
+        "title": "Can a Python Library collect private Data in the background?",
+        "description": "Can a Python Library collect private Data in the background, or install backdoors?If so how to figure out about that?\n",
+        "links": {
+            "embedded_link": [],
+            "external_links": []
+        },
+        "post_link": "https://www.reddit.com/r/Python/comments/wkja40/can_a_python_library_collect_private_data_in_the/"
+    }
+]
